@@ -1,0 +1,18 @@
+-inherit boilerplate.plim
+
+-block title
+  Vue.js Quickstart
+
+-block extrahead
+  link rel='stylesheet' href='styles.styl'
+  script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js'
+
+-block extrascript
+  script src='main.js'
+
+-block body
+  .container
+    h1 = title()
+
+    #app
+      {{ message }}
