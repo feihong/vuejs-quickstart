@@ -5,10 +5,12 @@
 
 -block extrahead
   link rel='stylesheet' href='styles.styl'
-  script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js'
+
 
 -block extrascript
-  script src='main.js'
+  script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js'
+  / script src='main.js'
+  script src='main.pyj'
 
 -block body
   .container
