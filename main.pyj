@@ -8,5 +8,10 @@ new Vue({
         'b': def(): return this.a + 1
         ,
         'c': def(): return this.a * 2
+    },
+    'methods': {
+        'increment': def(): this.a = this.a + 1
+        ,
+        'decrement': def(): this.a = this.a - 1
     }
 })

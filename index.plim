@@ -15,11 +15,11 @@
   .container
     h1 = title()
 
-    div
-      button.decrement -
-      button.increment +
-
     #app
+      div
+        button(v-on:click='decrement') -
+        button(v-on:click='increment') +
+
       p a: {{ a }}
       p b: {{ b }}
       p c: {{ c }}
