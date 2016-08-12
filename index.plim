@@ -4,11 +4,10 @@
   Vue.js Quickstart
 
 -block extrahead
+  script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js'
   link rel='stylesheet' href='styles.styl'
 
-
 -block extrascript
-  script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js'
   / script src='main.js'
   script src='main.pyj'
 
@@ -16,5 +15,11 @@
   .container
     h1 = title()
 
+    div
+      button.decrement -
+      button.increment +
+
     #app
-      {{ message }}
+      p a: {{ a }}
+      p b: {{ b }}
+      p c: {{ c }}

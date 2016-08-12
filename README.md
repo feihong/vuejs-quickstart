@@ -14,3 +14,5 @@ muffin app run
 ```
 
 ## Notes
+
+- Add the script tag for vue.js into head to avoid flicker.

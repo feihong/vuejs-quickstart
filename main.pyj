@@ -1,6 +1,12 @@
+
 new Vue({
     'el': '#app',
     'data': {
-        'message': 'Hello Vue.js!'
+        'a': 4
+    },
+    'computed': {
+        'b': def(): return this.a + 1
+        ,
+        'c': def(): return this.a * 2
     }
 })
