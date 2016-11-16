@@ -2,7 +2,7 @@
   <div class='.counter'>
     <div>
       <button class='btn waves-effect' v-on:click='decrement'>-</button>
-      <span class='counter'>{{ counter }}</span>
+      <span class='counter'>{{ count }}</span>
       <button class='btn waves-effect' v-on:click='increment'>+</button>
     </div>
   </div>
@@ -12,14 +12,17 @@
 export default {
   name: 'counter',
   props: ['initialCounter'],
-  data() {
-    return {
-      counter: this.initialCounter,
+  created() {
+    this.$store.commit('setCount', this.initialCounter)
+  },
+  computed: {
+    count() {
+      return this.$store.state.count
     }
   },
   methods: {
-    increment() { this.counter++ },
-    decrement() { this.counter-- }
+    increment() { this.$store.commit('increment') },
+    decrement() { this.$store.commit('decrement') }
   }
 }
 </script>
