@@ -3,9 +3,11 @@
     <h1>{{ message }}</h1>
     <div>
       <button class='btn waves-effect' v-on:click='decrement'>-</button>
-      <span class='counter blue darken-2 white-text'>{{ counter }}</span>
+      <span class='counter'>{{ counter }}</span>
       <button class='btn waves-effect' v-on:click='increment'>+</button>
     </div>
+
+    <p class='twice blue darken-2 white-text'>Two times: {{ twice }}</p>
   </div>
 </template>
 
@@ -17,6 +19,9 @@ export default {
       message: 'Welcome to your Vue.js App',
       counter: 0,
     }
+  },
+  computed: {
+    twice() { return this.counter * 2 }
   },
   methods: {
     increment() { this.counter++ },
@@ -36,8 +41,10 @@ export default {
 }
 .counter {
   padding: 0.2em 1em;
-  text-align: center;
   font-size: 1.1em;
+}
+.twice {
+  padding: 0.5em 0;
 }
 h1 {
   font-weight: normal;
