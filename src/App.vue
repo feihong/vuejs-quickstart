@@ -2,13 +2,11 @@
   <div id='app'>
     <h1>{{ message }}</h1>
 
-    <p>
-      <router-link to='/counter/42'>Counter A</router-link>
-      |
-      <router-link to='/counter/666'>Counter B</router-link>
-      |
-      <router-link to='/font-preview'>Font Preview</router-link>
-    </p>
+    <div class='routes row'>
+        <router-link class='col s2 offset-s3' to='/counter/42'>Counter A</router-link>
+        <router-link class='col s2' to='/counter/666'>Counter B</router-link>
+        <router-link class='col s2' to='/font-preview'>Font Preview</router-link>
+    </div>
 
     <router-view></router-view>
   </div>
@@ -39,5 +37,8 @@ export default {
 }
 h1 {
   font-weight: normal;
+}
+.routes .router-link-active {
+  border-bottom: 2px solid #333;
 }
 </style>

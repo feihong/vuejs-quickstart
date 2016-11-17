@@ -36,7 +36,7 @@ export default {
   data() {
     return {
       sample: '你好世界！',
-      fontSize: 24,
+      fontSize: 40,
       fonts: fontNames,
     }
   }
