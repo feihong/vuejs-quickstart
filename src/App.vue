@@ -3,7 +3,9 @@
     <h1>{{ message }}</h1>
 
     <p>
-      <router-link to='/counter'>Counter</router-link>
+      <router-link to='/counter/42'>Counter A</router-link>
+      |
+      <router-link to='/counter/666'>Counter B</router-link>
       |
       <router-link to='/font-preview'>Font Preview</router-link>
     </p>

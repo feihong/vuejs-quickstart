@@ -21,7 +21,7 @@ const store = new Vuex.Store({
 })
 
 const routes = [
-  { path: '/counter', component: Counter },
+  { path: '/counter/:number', component: Counter },
   { path: '/font-preview', component: FontPreview },
 ]
 

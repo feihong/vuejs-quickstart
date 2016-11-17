@@ -40,4 +40,16 @@ STKaiti
 STSong
 SimHei
 SimSun
-SimSun-ExtB`.split('\n')
+SimSun-ExtB
+Songti SC
+Songti TC
+Tw Cen MT
+Weibei SC
+Weibei TC
+Xingkai SC
+Xingkai TC
+YuGothic
+Yuanti SC
+Yuanti TC
+Yuppy SC
+Yuppy TC`.split('\n')

@@ -11,9 +11,13 @@
 <script>
 export default {
   name: 'counter',
-  props: ['initialCounter'],
   created() {
-    this.$store.commit('setCount', this.initialCounter)
+    this.$store.commit('setCount', parseInt(this.$route.params.number))
+  },
+  watch: {
+    '$route' (val) {
+      this.$store.commit('setCount', parseInt(this.$route.params.number))
+    }
   },
   computed: {
     count() {
