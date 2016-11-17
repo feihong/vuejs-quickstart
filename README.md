@@ -11,7 +11,7 @@ pip install Invoke
 
 ## Running
 
-To run the web server and webpack watcher at the same time:
+Run webpack watcher and serve the page on `localhost:8000`:
 
 ```
 inv serve
@@ -23,3 +23,5 @@ This project's structure is based on these project templates:
 
 - [webpack-simple](https://github.com/vuejs-templates/webpack-simple)
 - [webpack](https://github.com/vuejs-templates/webpack)
+
+Materialize framework has a [weird issue](https://github.com/Dogfalo/materialize/issues/2848) where tab highlighting doesn't work for anchor tags that don't have a specific URL format. Using `data-href` doesn't solve the issue if you already have an `href` attribute in your `a` tag.
