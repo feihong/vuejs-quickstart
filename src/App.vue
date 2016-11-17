@@ -2,8 +2,13 @@
   <div id='app'>
     <h1>{{ message }}</h1>
 
-    <counter :initialCounter='42' />
-    <font-preview />
+    <p>
+      <router-link to='/counter'>Counter</router-link>
+      |
+      <router-link to='/font-preview'>Font Preview</router-link>
+    </p>
+
+    <router-view></router-view>
   </div>
 </template>
 
@@ -17,8 +22,7 @@ export default {
     return {
       message: 'Welcome to your Vue.js app'
     }
-  },
-  components: { Counter, FontPreview }
+  }
 }
 </script>
 

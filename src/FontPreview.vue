@@ -3,11 +3,11 @@
     <div class='row'>
       <div class='input-field col s8'>
         <input id='sample' type='text' v-model='sample'>
-        <label for='sample'>Sample</label>
+        <label class='active' for='sample'>Sample</label>
       </div>
       <div class='input-field col s4'>
         <input id='font-size' type='number' v-model='fontSize'>
-        <label for='font-size'>Font size</label>
+        <label class='active' for='font-size'>Font size</label>
       </div>
     </div>
 

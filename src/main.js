@@ -1,10 +1,13 @@
 import Vue from 'vue'
+import Vuex from 'vuex'
+import VueRouter from 'vue-router'
 import App from './App.vue'
 import Counter from './Counter.vue'
-import Vuex from 'vuex'
+import FontPreview from './FontPreview.vue'
 
 
 Vue.use(Vuex)
+Vue.use(VueRouter)
 
 const store = new Vuex.Store({
   state: {
@@ -17,9 +20,17 @@ const store = new Vuex.Store({
   }
 })
 
+const routes = [
+  { path: '/counter', component: Counter },
+  { path: '/font-preview', component: FontPreview },
+]
+
+const router = new VueRouter({routes})
+
 new Vue({
   el: '#app',
   store,
+  router,
   template: '<app/>',
   components: { App }
 })
