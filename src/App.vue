@@ -1,15 +1,15 @@
 <template>
   <div id='app'>
     <h1>{{ message }}</h1>
-    <p class='reversed'>Reversed:
-      <span class='blue-text'>{{ reversedMessage }}</span>
-    </p>
+
     <counter :initialCounter='42' />
+    <font-preview />
   </div>
 </template>
 
 <script>
 import Counter from './Counter.vue'
+import FontPreview from './FontPreview.vue'
 
 export default {
   name: 'app',
@@ -18,12 +18,7 @@ export default {
       message: 'Welcome to your Vue.js app'
     }
   },
-  computed: {
-    reversedMessage() {
-      return this.message.split('').reverse().join('')
-    }
-  },
-  components: { Counter }
+  components: { Counter, FontPreview }
 }
 </script>
 
@@ -35,11 +30,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-.reversed {
-  padding: 0.5em 0;
-  border: 1px dashed grey;
-  border-radius: 3px;
 }
 h1 {
   font-weight: normal;
