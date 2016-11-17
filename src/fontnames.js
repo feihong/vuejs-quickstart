@@ -1,6 +1,8 @@
 export default `Apple LiGothic
 Apple LiSung
 Avenir
+Avenir Next
+Avenir Next Condensed
 Baoli SC
 Baoli TC
 BiauKai

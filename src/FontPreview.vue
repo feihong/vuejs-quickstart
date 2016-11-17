@@ -1,9 +1,17 @@
 <template>
   <div>
-    Sample: <input v-model='sample'>
-    Font size: <input type='number' v-model='fontSize'>
+    <div class='row'>
+      <div class='input-field col s8'>
+        <input id='sample' type='text' v-model='sample'>
+        <label for='sample'>Sample</label>
+      </div>
+      <div class='input-field col s4'>
+        <input id='font-size' type='number' v-model='fontSize'>
+        <label for='font-size'>Font size</label>
+      </div>
+    </div>
 
-    <table class=''>
+    <table class='striped bordered'>
       <thead>
         <tr>
           <th>Name</th>
