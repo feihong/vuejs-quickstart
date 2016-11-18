@@ -31,9 +31,8 @@ export default {
 }
 </script>
 
-<style>
-.counter {
-  padding: 0.2em 1em;
-  font-size: 1.1em;
-}
+<style lang='stylus'>
+.counter
+  padding: 0.2em 1em
+  font-size: 1.1em
 </style>
