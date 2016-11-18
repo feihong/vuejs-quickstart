@@ -1,11 +1,8 @@
-<template>
-  <div class='.counter'>
-    <div>
-      <button class='btn waves-effect' v-on:click='decrement'>-</button>
-      <span class='counter'>{{ count }}</span>
-      <button class='btn waves-effect' v-on:click='increment'>+</button>
-    </div>
-  </div>
+<template lang='pug'>
+div.counter
+  button.btn.waves-effect(v-on:click='decrement') -
+  span.counter {{count}}
+  button.btn.waves-effect(v-on:click='increment') +
 </template>
 
 <script>
