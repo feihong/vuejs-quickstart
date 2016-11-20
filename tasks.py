@@ -17,7 +17,9 @@ def serve(ctx):
     run_server()
     # Server is stopped, so stop webpack as well.
     webpack_proc.send_signal(signal.SIGINT)
+    print('Waiting for webpack to shut down...')
     webprack_proc.wait()
+    print('Done!')
 
 
 @task

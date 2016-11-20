@@ -1,6 +1,6 @@
 <template lang='pug'>
   div
-    div.row
+    div.row.params
       div.input-field.col.s8
         input#sample(type='text' v-model='sample')
         label.active(for='sample') Sample
@@ -16,7 +16,7 @@
       tbody
         tr(v-for='font in fonts')
           td {{ font }}
-          td(v-bind:style="{fontSize: fontSize + 'px', fontFamily: font}") {{ sample }}
+          td(v-bind:style='fontStyle(font)') {{ sample }}
 </template>
 
 <script>
@@ -30,6 +30,20 @@ export default {
       fontSize: 40,
       fonts: fontNames,
     }
+  },
+  methods: {
+    fontStyle(fontFamily) {
+      return {
+        fontSize: this.fontSize + 'px',
+        fontFamily: fontFamily,
+      }
+    }
   }
 }
 </script>
+
+<style scoped>
+.params input {
+  font-size: 1.2em;
+}
+</style>
